@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1765375010 source:c:\users\hp\documents\data abstraction\main.c
+	<stdio.h>
+	<stdlib.h>
+
