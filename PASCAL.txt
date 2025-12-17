@@ -1,0 +1,27 @@
+program AbstractionDemo;
+
+type
+  BankAccount = record
+    owner: string;
+    balance: integer;
+  end;
+
+procedure Deposit(var acc: BankAccount; amount: integer);
+begin
+  acc.balance := acc.balance + amount;
+end;
+
+function GetBalance(acc: BankAccount): integer;
+begin
+  GetBalance := acc.balance;
+end;
+
+var
+  acc: BankAccount;
+begin
+  acc.owner := 'Felix';
+  acc.balance := 5000;
+
+  Deposit(acc, 1000);
+  writeln(GetBalance(acc));  (* 6000 *)
+end.
